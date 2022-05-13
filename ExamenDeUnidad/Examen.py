@@ -95,9 +95,39 @@ def ejercicio4 ():
     genero:str()
     edad:int()
     mensaje:float
+    #Datos de entrada
+    edad=int(input("Ingrese la cantidad de años: "))
+    genero=str(input("Ingrese el genero (masculino o femenino): "))
+    #Proceso
+    if edad>=70:
+        mensaje=("Su vacuna es de tipo C")
+    elif edad>=16 and edad<70 and genero=="masculino":
+        mensaje=("Su vacuna es de tipo A")
+    elif edad>=16 and edad<70 and genero=="femenino":
+        mensaje=("Su vacuna es de tipo B")
+    else:
+        mensaje=("Su vacuna es de tipo A")
+    #Datos de salida
+    print(mensaje)
+def ejercicio5():
+    #Definir variables
+    nivel=float()
+    #Datos de entrada
+    nivel=float(input("Ingrese el numero del ejercicio(1-4): "))
+    #Proceso
+    if nivel>=5:
+        print("Ese ejercicio no existe ingrese otro")
+    elif nivel==4:
+        ejercicio4()
+    elif nivel==3:
+        ejercicio3()
+    elif nivel==2:
+        ejercicio2()
+    else:
+        ejercicio1()
 
 
-ejercicio3()
+ejercicio5()
     
 
   
