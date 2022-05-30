@@ -1,14 +1,17 @@
 public class ejercicio417 {
     public static void main(String[] args) {
-        double P, ahorros, i, n;
-        n=2021-1961;
-        P=1500.0;
+        //definir variable
+        double A, ahorros, i, S;
+        A=2021-1961;
+        S=1500.0;
         i=15.0/100.0;
-        ahorros=P*Math.pow(1.0+i,n);
-        System.out.println("Valor de P: " + P);
+        //proceso
+        ahorros=A*Math.pow(1.0+i,S);
+        //datos de salida
+        System.out.println("Valor de P: " + S);
         System.out.println("Valor de ahorros: " + ahorros);
         System.out.println("Valor de i: " + i);
-        System.out.println("Valor de n: " + n);
+        System.out.println("Valor de n: " + S);
     }
 
 }

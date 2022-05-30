@@ -2,36 +2,40 @@ import java.util.Scanner;
 
 public class ejercicio414 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner lt = new Scanner(System.in);
+        //definir variable
         int i, n;
-        double descuento, horas_trabajadas, sueldo_por_hora, sueldo_semanal;
-        String nombre_del_trabajador;
+        double descuento, horas_trabajadas, salario_por_hora, salario_semanal;
+        String trabajador;
+        //datos de entrada
         System.out.print("Ingresa el valor de n: ");
-        n = in.nextInt();
-        in.nextLine();
+        n = lt.nextInt();
+        lt.nextLine();
+        //proceso
         for (i=1; i<=n; i++) {
             System.out.print("PROCESO " + i);
             System.out.print("Ingresa el nombre del trabajador: ");
-            nombre_del_trabajador = in.nextLine();
+            trabajador = lt.nextLine();
             System.out.print("Ingresa el valor de horas trabajadas: ");
-            horas_trabajadas = in.nextDouble();
-            in.nextLine();
+            horas_trabajadas = lt.nextDouble();
+            lt.nextLine();
             System.out.print("Ingresa el valor de sueldo por hora: ");
-            sueldo_por_hora = in.nextDouble();
-            in.nextLine();
-            in.nextLine();
-            sueldo_semanal=horas_trabajadas*sueldo_por_hora;
+            salario_por_hora = lt.nextDouble();
+            lt.nextLine();
+            lt.nextLine();
+            salario_semanal=horas_trabajadas*salario_por_hora;
             descuento=0;
-            if(sueldo_semanal>0&&sueldo_semanal<=150)
-                descuento=sueldo_semanal*0.05;
-            if(sueldo_semanal>150&&sueldo_semanal<=300)
-                descuento=sueldo_semanal*0.07;
-            if(sueldo_semanal>300&&sueldo_semanal<=450)
-                descuento=sueldo_semanal*0.09;
-            sueldo_semanal=sueldo_semanal-descuento;
-            System.out.println("Nombre del trabajador: " + nombre_del_trabajador);
+            if(salario_semanal>0&&salario_semanal<=150)
+                descuento=salario_semanal*0.05;
+            if(salario_semanal>150&&salario_semanal<=300)
+                descuento=salario_semanal*0.07;
+            if(salario_semanal>300&&salario_semanal<=450)
+                descuento=salario_semanal*0.09;
+                salario_semanal=salario_semanal-descuento;
+        //datos de salida
+            System.out.println("Nombre del trabajador: " + trabajador);
             System.out.println("Valor de descuento: " + descuento);
-            System.out.println("Valor de sueldo semanal: " + sueldo_semanal);
+            System.out.println("Valor de sueldo semanal: " + salario_semanal);
             System.out.println();
         }
     }
