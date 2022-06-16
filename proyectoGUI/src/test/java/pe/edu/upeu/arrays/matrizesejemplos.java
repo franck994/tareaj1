@@ -28,7 +28,53 @@ public class matrizesejemplos {
       
         
     }
+
+
+
+
+
+
+
+    public void matricesx() {
+        int notas[][]={{20,18},{16,10}};
+        notas[1][1]=15;
+
+        for (int f = 0; f < notas.length; f++) {
+            for (int c = 0; c< notas[0].length; c++) {
+                System.out.print(notas[f][c]+"\t");
+                
+            }
+            System.out.println("");
+
+        }
+        
+    }
+
+    public void sumadematrices() {
+        int[][] A={{-3,0},{2,5},{8,7}};
+        int[][] B={{7,-5},{4,-2},{2,-4}};
+        int[][] R=new int[A.length][A[0].length];
+        for (int f = 0;f < A.length; f++) {
+            for (int c = 0; c < B[0].length; c++) {
+                R[f][c]=A[f][c]+B[f][c];
+                
+            }
+            
+        }
+        imptimirrm(R);
+     
+    }
+    public void imptimirrm(int[][] m) {
+        for (int f = 0; f < m.length; f++) {
+            for (int c = 0; c < m[0].length; c++){
+                System.out.print(m[f][c]+"\t");
+            }
+            System.out.println("");
+    }  
+    }
     public static void main(String[] args) {
-        new matrizesejemplos().matricesbasicos();
+        //new matrizesejemplos().matricesbasicos();
+        //new matrizesejemplos().matricesx();
+        new matrizesejemplos().sumadematrices();
     }
 }
